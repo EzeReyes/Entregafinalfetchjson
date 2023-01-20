@@ -1,0 +1,103 @@
+[
+    {
+        "id": 1,
+        "nombre": "Chicle",
+        "precio": 400, 
+        "img": "./img/carrito/productos/1chicle.jpg",
+        "descripcion": "Ceras ABM linea Candy Fruits. Fijación media a fuerte HIDRATA y MODELA",
+        "tipo": "cera",
+        "oferta": true,
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Brutus",
+        "precio": 600,
+        "img": "./img/carrito/productos/2brutus.jpeg",
+        "descripcion": "Balsamo para Barba y Bigote.Nuestro bálsamo para barba exfolia e hidrata",
+        "tipo": "balsamo",
+        "oferta": false,
+        "cantidad": 1
+    },
+    {   
+        "id": 3,
+        "nombre": "Desert Clay",
+        "precio": 550,
+        "img": "./img/carrito/productos/3desert_clay.jpeg",
+        "descripcion": "Arcilla de alta calidad: Ingredientes orgánicos puros y arcilla bentonita",
+        "tipo": "pomada",
+        "oferta": false,
+        "cantidad": 1
+    },
+    {   
+        "id": 4,
+        "nombre": "Gel Capilar",
+        "precio": 450,
+        "img": "./img/carrito/productos/4gel.jpg",
+        "descripcion": "Gel GOMINA de extra brillo y fijación ultra fuerte.Fragancia Kosiuko, efecto humedo",
+        "tipo": "gel",
+        "oferta": false,
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Manzana INK",
+        "precio": 400, 
+
+        "img": "./img/carrito/productos/5manzana_ink.jpg",
+        "descripcion": "Ceras ABM linea Candy Fruits. Fijación media a fuerte HIDRATA y MODELA",
+        "tipo": "cera",
+        "oferta": true,
+        "cantidad": 1
+    },
+    {   
+        "id": 6,
+        "nombre": "Marine",
+        "precio": 450,
+        "img": "./img/carrito/productos/6marine.jpg",
+        "descripcion": "Fragancia exclusiva Staygold: notas cítricas, acuáticas y amaderadas",
+        "tipo": "cera",
+        "oferta": false,
+        "cantidad": 1
+    },
+    {   
+        "id": 7,
+        "nombre": "Matte String",
+        "precio": 450,
+        "img": "./img/carrito/productos/7matte.jpg",
+        "descripcion": "Pomada de fijación media y acabado mate/opaco. Enriquecido con extractos naturales",
+        "tipo": "pomada",
+        "oferta": false,
+        "cantidad": 1
+    },
+    {   
+        "id": 8,
+        "nombre": "Oleo para barba",
+        "precio": 550,
+        "img": "./img/carrito/productos/8oleo.jpg",
+        "descripcion": "Óleo Formulado con mezcla de aceites que promueven el crecimiento del vello de la barba",
+        "tipo": "oleo",
+        "oferta": false,
+        "cantidad": 1
+    },
+    {   
+        "id": 9,
+        "nombre": "ABM Powder",
+        "precio": 600,
+        "img": "./img/carrito/productos/9powder.jpg",
+        "descripcion": "Polvo voluminizador 3D para cabello normal y fino. Enriquecido con pantenol",
+        "tipo": "polvo",
+        "oferta": false,
+        "cantidad": 1
+    },
+    {   
+        "id": 10,
+        "nombre": "Shaving gel",
+        "precio": 550,
+        "img":"./img/carrito/productos/10shaving_gel.jpeg",
+        "descripcion": "Shaving Gel es un gel de afeitado que no oscurece, tampoco se convierte en espuma",
+        "tipo": "gel",
+        "oferta": false,
+        "cantidad": 1
+    }
+]
