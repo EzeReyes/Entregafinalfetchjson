@@ -15,17 +15,6 @@ contenedor2.style.display= "none"
 contenedor3.style.display= "none"
 contenedor4.style.display= "none"
 
-const prodDesc = productos.filter(( elemento ) => {
-    return elemento.oferta==true
-})
-
-const ceras = productos.filter((elemento) => {
-    return elemento.tipo=="cera"
-})
-
-const pomadas = productos.filter((elemento) => {
-    return elemento.tipo=="pomada"
-})
 
 let carrito = []
 
@@ -40,10 +29,10 @@ const cardHtml = ( array,c ) => {
                     ${element.nombre}
                 </h3>
                 <h3>
-                    ${element.precio}
+                    $${element.precio}
                 </h3>
                 <button id="boton-${element.id}" class="btnCompra">
-                    Agregar del carrito
+                    Agregar al carrito
                 </button>
             </div>
         `
@@ -51,18 +40,31 @@ const cardHtml = ( array,c ) => {
 
     document.querySelector(c).innerHTML = generarNodos
 }
-cardHtml(prodDesc,".prodConDescuento")
-cardHtml(ceras,".cera")
-cardHtml(pomadas,".pomada")
+
 
 fetch("./js/productos.json")
     .then(resp => resp.json())
     .then(data => {
         productos = data;
         cardHtml(productos,".carrito")
-        aniadirAlCarrito(productos)
-    })
+        const prodDesc = productos.filter(( elemento ) => {
+            return elemento.oferta==true
+        })
+        
+        const ceras = productos.filter((elemento) => {
+            return elemento.tipo=="cera"
+        })
+        
+        const pomadas = productos.filter((elemento) => {
+            return elemento.tipo=="pomada"
+        })
 
+        cardHtml(prodDesc,".prodConDescuento")
+        cardHtml(ceras,".cera")
+        cardHtml(pomadas,".pomada")
+        aniadirAlCarrito(productos)
+
+    })
 
     todos.onclick = () => { 
         contenedor.style.display = "grid" 
@@ -114,9 +116,18 @@ function aniadirAlCarrito (array) {
             const filtrarProducto = array.find((elemento) => {
                 return elemento.id === Number(id)
             })
-            swal(`Buena elección: ${filtrarProducto.tipo}`,`${filtrarProducto.nombre}`) 
+            Toastify({
+                text : `Agregó al carrito ${filtrarProducto.tipo}` + ` ` + `${filtrarProducto.nombre} ✔️`,
+                className: "info",
+                style: {
+                    boxShadow: "0 0rem 2rem 0rem #b0a299",
+                    background: "black",
+                    border: "1px solid white",
+                    color: "white",
+                    borderRadius: "0.5rem",
+                }
+            }).showToast();
             const repeat = carrito.some((repeatproduct) => repeatproduct.id === filtrarProducto.id)
-            console.log(repeat)
             if (repeat) {
                 carrito.map((prod) => {
                     if(prod.id === filtrarProducto.id){
@@ -124,10 +135,11 @@ function aniadirAlCarrito (array) {
                     }
                 })
             } else{
-            carrito.push(filtrarProducto)   }
-            console.log(carrito)
+            carrito.push(filtrarProducto) 
+        }
             localStorage.setItem("carrito", JSON.stringify(carrito))  
                         contadorCarro()
+                        console.log(formsInputs)
         }
     })
 }

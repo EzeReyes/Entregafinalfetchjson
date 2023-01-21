@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/imgLogos/papaya.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  </head>
 <body>
   <div class="gridCarrito">
     <div class="menu">  
@@ -37,7 +38,7 @@
             <a class="nav-link" href="./quienessomos.html">Quienes Somos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./productos.html">Productos</a>
+            <a class="nav-link" href="./info.html">+ Info</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./contacto.html">Contacto</a>
@@ -52,13 +53,19 @@
             </div>
             </div>
     </nav>
-    <button id="borrar-productos">BORRAR TODO EL CARRITO</button>
 <!--     <div class="contadorCarrito"></div>
  -->    <section class="containerCarrito">
     </section>
     <article class="vistaPreviaCarrito">
-      <h5>VISTA PREVIA CARRITO</h5>
-      <p id="total">Su compra:</p>
+      <button id="borrarProductos">BORRAR TODO EL CARRITO</button>
+      <h5 id="total"></h5> 
+      <form id="form" action="https://formsubmit.co/ese.reyes1992@gmail.com" method="post">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+        <input type="hidden" name="_captcha" value="false">
+        <div id="formsInputs">
+        </div>
+        </form>
+      <button type="button" id="pagar">PAGAR</button>
     </article>
     <section class="wave">
         <h3>EL ABUELO MARIO</h3>
@@ -72,10 +79,13 @@
           </div>
     </footer>
   </div>
+  </div>
+  <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script> 
   <script src="./js/carro.js"></script>
   <script src="./js/productos.js"></script>
   <script src="./js/catalogo.js"></script>
-      <script src="./js/home.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>   
-  </body>
+  <script src="./js/home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>   
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    </body>
 </html>

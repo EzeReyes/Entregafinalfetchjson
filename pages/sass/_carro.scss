@@ -3,189 +3,127 @@
     height: 100vh;
     grid-template-areas: 
         "navb navb navb"
-        "nov nov nov"
-        "car car car"  
-        "wav wav vist"
+        "carr carr carr"
+        "vist vist vist"
         "foot foot foot";
 }
-.novedades {
+
+.containerCarrito {
+    grid-area: carr;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000000;
     flex-direction: column;
-    .novedades__cont {
-        padding: 2rem;
-        grid-area: nov;
-        width: 40rem;
-    }
-    .novedades__título {
-        color: #dddddf;
-        font-size: 2rem;
-        padding: 1rem;
-        h3 {
-        text-shadow: rgba(5, 86, 223, 0.5) 0 4rem 3rem;
-        text-transform: capitalize;
-        font-size: 5rem;
-        margin-bottom: 4rem;
-        }
-        }
-    }
-
-.compra {
-    height: 5rem;
-    background-color:#626263;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    span {
-        display: block;
-        white-space: nowrap;
-        color: #dee7f3;
-        border-right: 5px solid #dee7f3;
-        width: 39ch;
-        animation: escribir 5s steps(43),
-        parpadeo 0.4s infinite alternate;
-        overflow:hidden ;
-        }
-        @keyframes escribir {
-        from {
-            width: 0;
-            }
-        }
-        @keyframes parpadeo {
-            70% {
-            border-color: transparent;
-            }
-        }
-    }
-
-.productoPorCategoria {
-    display: flex;
-    justify-content: space-around;
-    background-color: #212529;
-    align-items: center;
-    .btnSelector {
-        margin-top: 1rem;
-        text-transform: none;
-        border-radius: 0.5rem;
-        padding: 0.2rem;
-        background-color: #212529;
-        color:rgb(255 255 255);
-        border: rgb(255 255 255) 2px solid;
-        }
-    }
-
-.carrito, .prodConDescuento, .cera, .pomada {
-    display: grid;
-    grid-area: car;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    background-color: #111112a8;
-    gap: 1rem;
+    background-color: rgb(33 37 41);
+    gap: 0.2rem;
     justify-items: center;
-    align-items: center;
-    padding: 1rem;
+    align-items: flex-start;
     border: 1rem solid;
+    .card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    background-color: #a9a9a9;
+    }
     div {
         display: flex;
-        flex-direction: column;
-        width: 15rem;
-        height: auto;
-        border-radius: 1rem;
-        .carrito__titulo {
-        text-align: center;
-        color: #dee7f3;
-        font-style: oblique;
-        font-weight: 900;
-    }
-        .carrito__botones {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            margin-top: 1rem;
+        flex-direction: row;
+        height: 5rem;
+        align-items: center;
         }
         img {
-            border-radius: 1rem;
             cursor: pointer;
-            }
+            height: 5rem;
+            width: 5rem;
+            border-radius: 1rem;
+        }
+        .infoCarrito {
+            display: flex;
+            flex-direction: row;
+            justify-content: first baseline;
+            width: 50rem;
         h3 {
-        font-size: 1rem;
-        color: #000000;
-        text-align: center;
-        margin-top: 0.5rem;
+            width: 15rem;
+            display: flex;
+            justify-content: space-evenly;
+        }
     }
     }
-}
-
-        .btnCompra{
-            font-size: 1rem;
-            padding: 0.5rem;
-            width: max-content;
-            text-align: center;    
-            height: 2.5rem;
-            border-radius: 0.7rem;
-            background-color: #dddddf;
-            p {
-                color: #000000;
-            }
+        
+        .btnBorrar {
+            color: rgb(255 255 255);
+            height: 5rem;
+            width: 5rem;
+            background-color: #212529;
+            border-radius: 50%;
+            border: rgb(255 255 255) 2px solid;
         }
     
-        .btnCompra:hover {
-            background: black;
-            text-decoration: none;
-        p {
-            color: white;
-        }
-    }
-
-    .carrito div:active > img {
-        transform: scale(1.2);
-        box-shadow: 0 0.5rem 1rem 0.5rem rgba(5, 86, 223, 0.5);
-        }
-
-    .wave {
-        grid-area: wav;
-        display: flex;
-        background: linear-gradient(to left, rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.39)), url("../img/carrito/productos/11banner.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        text-align: center;
-        height: 15rem;
-        align-items: center;
-        justify-content: center;
-        h3 {
-            font-size: 5rem;
-            color: #dddddf;
-        }    
-    }
-        .wave:hover {
-            background-color: #dddddf;
-            h3 {
-                color: #000000;
-                text-shadow:rgb(255 255 255) 0 0 1rem;    
-                text-decoration: underline;  
-                    }  
-            }
-
             .vistaPreviaCarrito {
                 grid-area: vist;
                 display: flex;
-                flex-direction: column;
-                background: white;
+                flex-direction: row;
+                background-color: #a9a9a9;
                 text-align: center;
-                height: 15rem;
+                height: 5rem;
                 align-items: center;
-                justify-content: center;
+                justify-content:space-around;
                 h5 {
                     font-size: 1rem;
                     color: #0f0f0f;
                 }    
+                #borrarProductos, #pagar{
+                text-transform: none;
+                border-radius: 0.5rem;
+                padding: 0.2rem;
+                background-color: #212529;
+                color:rgb(255 255 255);
+                border: rgb(255 255 255) 2px solid;
             }
+        }
 
+        .eliminarTodo {
+            background-color: #f30707;
+        }
+
+
+        #total {
+            color: rgb(255, 255, 255);
+            text-shadow: rgb(5 86 223 / 50%) 0 4rem 3rem;
+        }
+
+        .wave {
+            grid-area: wav;
+            display: flex;
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.39)), url("../img/carrito/dde.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            height: 35.4rem;
+            align-items: center;
+            justify-content: center;
+            h3 {
+                font-size: 5rem;
+                color: hsl(240, 3%, 87%);
+            }    
+        }
+            .wave:hover {
+                background-color: hsl(240, 3%, 87%);
+                h3 {
+                    color: #000000;
+                    text-shadow:rgb(255 255 255) 0 0 1rem;    
+                    text-decoration: underline;  
+                        }  
+                }
+
+                .formulario{
+                    display: none;
+                }
+
+                #botonOculto {
+                    color: rgb(255, 255, 255);
+                }
     @media (min-width: 577px) and (max-width: 835px) {
 
         .gridCarrito {

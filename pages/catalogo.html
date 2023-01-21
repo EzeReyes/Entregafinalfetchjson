@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/imgLogos/papaya.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  </head>
 <body>
   <div class="gridCarrito">
     <div class="menu">  
@@ -37,7 +38,7 @@
             <a class="nav-link" href="./quienessomos.html">Quienes Somos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./productos.html">Productos</a>
+            <a class="nav-link" href="./info.html">+ Info</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./contacto.html">Contacto</a>
@@ -99,11 +100,12 @@
     <article class="compra">
       <span>Compra desde tu casa, nosotros te lo enviamos</span>
     </article>
-    <input id="todosLosProductos" type="button" value="Todos los Productos">
-    <input id="btndesc" type="button" value="Productos con descuento">
-    <input id="categoriaCera" type="button" value="Ceras">
-    <input id="categoriaPomada" type="button" value="Pomadas">
-    <input type="search" name="buscador de productos" placeholder="buscar...." id="buscador">
+    <div class="productoPorCategoria">
+    <input class="btnSelector" id="todosLosProductos" type="button" value="Todos los Productos">
+    <input class="btnSelector" id="btndesc" type="button" value="Productos con descuento">
+    <input class="btnSelector" id="categoriaCera" type="button" value="Ceras">
+    <input class="btnSelector" id="categoriaPomada" type="button" value="Pomadas">
+    </div>
     <section class="carrito">
     </section>
     <section class="prodConDescuento">
@@ -121,9 +123,9 @@
           </div>
     </footer>
   </div>
-  <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script> 
   <script src="./js/catalogo.js"></script>
-      <script src="./js/home.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>   
-    </body>
+  <script src="./js/home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>   
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
 </html>

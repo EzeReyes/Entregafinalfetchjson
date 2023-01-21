@@ -1,8 +1,8 @@
 /* EN ESTE ARCHIVO JS SE CREO EL REGISTRO DE USUARIO PARA PODER INGRESAR AL SITIO DEBE UTILIZAR LA CONST usuarioPred, SE CREO EL FORMULARIO QUE ES VALIDAD MEDIANTE CLAVE Y VALOR, UNA VEZ EN EL SITIO PODRA NAVEGAR , SI DESEA CERRAR SESIÓN LO DEBE HACER DESDE LA PÁGINA INDEX */
 
 const usuarioPred = {
-    usuario: "Ezeq22",
-    contrasenia : "64564dgrgdfg"
+    usuario: "ese.reyes1992@gmail.com",
+    contrasenia : "abc123"
 }
 
 const pantallaDeInicio = document.querySelector(".grid-inicio")

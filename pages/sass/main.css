@@ -1692,7 +1692,23 @@ aside div video {
   }
 }
 
-.carrito, .prodConDescuento, .cera, .pomada, .containerCarrito {
+.productoPorCategoria {
+  display: flex;
+  justify-content: space-around;
+  background-color: #212529;
+  align-items: center;
+}
+.productoPorCategoria .btnSelector {
+  margin-top: 1rem;
+  text-transform: none;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  background-color: #212529;
+  color: rgb(255, 255, 255);
+  border: rgb(255, 255, 255) 2px solid;
+}
+
+.carrito, .prodConDescuento, .cera, .pomada {
   display: grid;
   grid-area: car;
   grid-template-columns: repeat(2, 1fr);
@@ -1704,31 +1720,31 @@ aside div video {
   padding: 1rem;
   border: 1rem solid;
 }
-.carrito div, .prodConDescuento div, .cera div, .pomada div, .containerCarrito div {
+.carrito div, .prodConDescuento div, .cera div, .pomada div {
   display: flex;
   flex-direction: column;
   width: 15rem;
   height: auto;
   border-radius: 1rem;
 }
-.carrito div .carrito__titulo, .prodConDescuento div .carrito__titulo, .cera div .carrito__titulo, .pomada div .carrito__titulo, .containerCarrito div .carrito__titulo {
+.carrito div .carrito__titulo, .prodConDescuento div .carrito__titulo, .cera div .carrito__titulo, .pomada div .carrito__titulo {
   text-align: center;
   color: #dee7f3;
   font-style: oblique;
   font-weight: 900;
 }
-.carrito div .carrito__botones, .prodConDescuento div .carrito__botones, .cera div .carrito__botones, .pomada div .carrito__botones, .containerCarrito div .carrito__botones {
+.carrito div .carrito__botones, .prodConDescuento div .carrito__botones, .cera div .carrito__botones, .pomada div .carrito__botones {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   margin-top: 1rem;
 }
-.carrito div img, .prodConDescuento div img, .cera div img, .pomada div img, .containerCarrito div img {
+.carrito div img, .prodConDescuento div img, .cera div img, .pomada div img {
   border-radius: 1rem;
   cursor: pointer;
 }
-.carrito div h3, .prodConDescuento div h3, .cera div h3, .pomada div h3, .containerCarrito div h3 {
+.carrito div h3, .prodConDescuento div h3, .cera div h3, .pomada div h3 {
   font-size: 1rem;
   color: #000000;
   text-align: center;
@@ -1802,6 +1818,252 @@ aside div video {
 .vistaPreviaCarrito h5 {
   font-size: 1rem;
   color: #0f0f0f;
+}
+
+@media (min-width: 577px) and (max-width: 835px) {
+  .gridCarrito {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "navb" "nov" "car" "wav" "foot";
+    grid-template-columns: 100vw;
+  }
+  .novedades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    flex-direction: column;
+  }
+  .novedades .novedades__cont {
+    padding: 2rem;
+    grid-area: nov;
+    width: 40rem;
+  }
+  .novedades .novedades__título {
+    color: #dddddf;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .novedades .novedades__título h3 {
+    text-align: center;
+    text-shadow: rgba(5, 86, 223, 0.5) 0 4rem 3rem;
+    text-transform: capitalize;
+    font-size: 5rem;
+    margin-bottom: 4rem;
+  }
+  .compra {
+    height: auto;
+    background-color: #626263;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .compra span {
+    display: block;
+    white-space: nowrap;
+    color: #dee7f3;
+    border-right: 5px solid #dee7f3;
+    width: 39ch;
+    -webkit-animation: escribir 5s steps(43), parpadeo 0.4s infinite alternate;
+            animation: escribir 5s steps(43), parpadeo 0.4s infinite alternate;
+    overflow: hidden;
+  }
+  @-webkit-keyframes escribir {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes escribir {
+    from {
+      width: 0;
+    }
+  }
+  @-webkit-keyframes parpadeo {
+    70% {
+      border-color: transparent;
+    }
+  }
+  @keyframes parpadeo {
+    70% {
+      border-color: transparent;
+    }
+  }
+  .carrito {
+    display: grid;
+    grid-area: car;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: rgba(17, 17, 18, 0.6588235294);
+    gap: 1rem;
+    justify-items: center;
+    padding: 1rem;
+    border: 1rem solid;
+  }
+}
+@media (min-width: 325px) and (max-width: 576px) {
+  .gridCarrito {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "navb" "nov" "car" "wav" "foot";
+    grid-template-columns: 100vw;
+  }
+  .novedades {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    flex-direction: column;
+  }
+  .novedades .novedades__cont {
+    padding: 2rem;
+    grid-area: nov;
+    width: 100vw;
+  }
+  .novedades h3 {
+    text-align: center;
+  }
+  .compra {
+    height: auto;
+    background-color: #626263;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .carrito {
+    display: grid;
+    grid-area: car;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: rgba(17, 17, 18, 0.6588235294);
+    gap: 1rem;
+    justify-items: center;
+    padding: 1rem;
+    border: 1rem solid;
+  }
+}
+.gridCarrito {
+  display: grid;
+  height: 100vh;
+  grid-template-areas: "navb navb navb" "carr carr carr" "vist vist vist" "foot foot foot";
+}
+
+.containerCarrito {
+  grid-area: carr;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(33, 37, 41);
+  gap: 0.2rem;
+  justify-items: center;
+  align-items: flex-start;
+  border: 1rem solid;
+}
+.containerCarrito .card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  background-color: #a9a9a9;
+}
+.containerCarrito div {
+  display: flex;
+  flex-direction: row;
+  height: 5rem;
+  align-items: center;
+}
+.containerCarrito img {
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 1rem;
+}
+.containerCarrito .infoCarrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: first baseline;
+  width: 50rem;
+}
+.containerCarrito .infoCarrito h3 {
+  width: 15rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btnBorrar {
+  color: rgb(255, 255, 255);
+  height: 5rem;
+  width: 5rem;
+  background-color: #212529;
+  border-radius: 50%;
+  border: rgb(255, 255, 255) 2px solid;
+}
+
+.vistaPreviaCarrito {
+  grid-area: vist;
+  display: flex;
+  flex-direction: row;
+  background-color: #a9a9a9;
+  text-align: center;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-around;
+}
+.vistaPreviaCarrito h5 {
+  font-size: 1rem;
+  color: #0f0f0f;
+}
+.vistaPreviaCarrito #borrarProductos, .vistaPreviaCarrito #pagar {
+  text-transform: none;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  background-color: #212529;
+  color: rgb(255, 255, 255);
+  border: rgb(255, 255, 255) 2px solid;
+}
+
+.eliminarTodo {
+  background-color: #f30707;
+}
+
+#total {
+  color: rgb(255, 255, 255);
+  text-shadow: rgba(5, 86, 223, 0.5) 0 4rem 3rem;
+}
+
+.wave {
+  grid-area: wav;
+  display: flex;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.267), rgba(255, 255, 255, 0.39)), url("../img/carrito/dde.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  height: 35.4rem;
+  align-items: center;
+  justify-content: center;
+}
+.wave h3 {
+  font-size: 5rem;
+  color: hsl(240deg, 3%, 87%);
+}
+
+.wave:hover {
+  background-color: hsl(240deg, 3%, 87%);
+}
+.wave:hover h3 {
+  color: #000000;
+  text-shadow: rgb(255, 255, 255) 0 0 1rem;
+  text-decoration: underline;
+}
+
+.formulario {
+  display: none;
+}
+
+#botonOculto {
+  color: rgb(255, 255, 255);
 }
 
 @media (min-width: 577px) and (max-width: 835px) {
