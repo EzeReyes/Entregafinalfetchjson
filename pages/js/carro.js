@@ -112,10 +112,11 @@ const botonCatalogo = `<a id="botonOculto" class="nav-link" href="./catalogo.htm
         })
         .then( resp => {
             if (resp) {
-                borrarTodo()
+                setTimeout(() => {
+                    borrarTodo()
+                }, 1000)}
+            })
             }
-        })
-    }
 
 
 botonPagar.onclick = () => {

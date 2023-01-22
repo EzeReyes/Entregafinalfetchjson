@@ -14,6 +14,7 @@ const vistaCarrito = document.querySelector(".vistaPreviaCarrito")
 contenedor2.style.display= "none"
 contenedor3.style.display= "none"
 contenedor4.style.display= "none"
+const simuladorDeCarga = document.querySelector(".containerLoad")
 
 
 let carrito = []
@@ -97,15 +98,21 @@ fetch("./js/productos.json")
 
         const contador = document.querySelector("#contadorCarrito")
 
-        function contadorCarro () {
+function contadorCarro () {
             if (carrito.length === 0) {
                 contador.innerText.style.display=none
             }
             else {
                 contador.innerText = carrito.length
-            }
-        }
+            }        }
 
+const timeOutSimulador = () => { setTimeout(() => {
+        simuladorDeCarga.style.display="block"
+    }, 0)}
+
+const restableSimulador = () => {setTimeout(() => {
+    simuladorDeCarga.style.display="none";
+}, 2000) }
 
 
 function aniadirAlCarrito (array) {
@@ -116,10 +123,13 @@ function aniadirAlCarrito (array) {
             const filtrarProducto = array.find((elemento) => {
                 return elemento.id === Number(id)
             })
+            timeOutSimulador()
+            setTimeout(() => {
             Toastify({
                 text : `Agregó al carrito ${filtrarProducto.tipo}` + ` ` + `${filtrarProducto.nombre} ✔️`,
                 className: "info",
                 style: {
+                    fontSize: "1.3rem",
                     boxShadow: "0 0rem 2rem 0rem #b0a299",
                     background: "black",
                     border: "1px solid white",
@@ -137,13 +147,14 @@ function aniadirAlCarrito (array) {
             } else{
             carrito.push(filtrarProducto) 
         }
-            localStorage.setItem("carrito", JSON.stringify(carrito))  
+    }, 500)
+    restableSimulador()
+    localStorage.setItem("carrito", JSON.stringify(carrito))  
                         contadorCarro()
                         console.log(formsInputs)
         }
     })
 }
-
 
 const productosElegidos = JSON.parse(localStorage.getItem("carrito"))
 carrito = productosElegidos || []
