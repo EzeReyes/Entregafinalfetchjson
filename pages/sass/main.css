@@ -479,6 +479,43 @@ aside div video {
   }
 }
 @media (min-width: 325px) and (max-width: 576px) {
+  .grid-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-image: linear-gradient(rgb(3, 71, 87), gray);
+    height: 100vh;
+  }
+  .grid-inicio .containerForm {
+    background-color: gray;
+    height: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .grid-inicio .bienvenido {
+    font-size: 1rem;
+    color: black;
+  }
+  .grid-inicio #formularioDeInicio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .grid-inicio #formularioDeInicio input {
+    padding: 0.3rem;
+    margin: 2rem;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+  .grid-inicio #formularioDeInicio #logint {
+    display: none;
+    color: red;
+  }
   .grid-area {
     display: grid;
     grid-template-areas: "navb" "ppal" "bgwh" "bgbl" "bgwh2" "asi" "bgbl2" "foot";
@@ -1625,12 +1662,14 @@ aside div video {
 }
 .containerLoad {
   display: none;
-  background-color: rgba(250, 240, 245, 0.9);
+  background-color: rgba(250, 240, 245, 0.404);
   height: 100%;
   width: 100%;
   position: fixed;
   transition: all 1s ease;
   z-index: 9000;
+  font-size: 5rem;
+  color: #f7f8f7;
 }
 .containerLoad .load {
   border: 15px solid #ccc;
@@ -2114,126 +2153,52 @@ aside div video {
   color: rgb(255, 255, 255);
 }
 
-@media (min-width: 577px) and (max-width: 835px) {
-  .gridCarrito {
-    display: grid;
-    height: 100vh;
-    grid-template-areas: "navb" "nov" "car" "wav" "foot";
-    grid-template-columns: 100vw;
-  }
-  .novedades {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000000;
-    flex-direction: column;
-  }
-  .novedades .novedades__cont {
-    padding: 2rem;
-    grid-area: nov;
-    width: 40rem;
-  }
-  .novedades .novedades__título {
-    color: #dddddf;
-    font-size: 2rem;
-    padding: 1rem;
-  }
-  .novedades .novedades__título h3 {
-    text-align: center;
-    text-shadow: rgba(5, 86, 223, 0.5) 0 4rem 3rem;
-    text-transform: capitalize;
-    font-size: 5rem;
-    margin-bottom: 4rem;
-  }
-  .compra {
-    height: auto;
-    background-color: #626263;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-  }
-  .compra span {
-    display: block;
-    white-space: nowrap;
-    color: #dee7f3;
-    border-right: 5px solid #dee7f3;
-    width: 39ch;
-    -webkit-animation: escribir 5s steps(43), parpadeo 0.4s infinite alternate;
-            animation: escribir 5s steps(43), parpadeo 0.4s infinite alternate;
-    overflow: hidden;
-  }
-  @-webkit-keyframes escribir {
-    from {
-      width: 0;
-    }
-  }
-  @keyframes escribir {
-    from {
-      width: 0;
-    }
-  }
-  @-webkit-keyframes parpadeo {
-    70% {
-      border-color: transparent;
-    }
-  }
-  @keyframes parpadeo {
-    70% {
-      border-color: transparent;
-    }
-  }
-  .carrito {
-    display: grid;
-    grid-area: car;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    background-color: rgba(17, 17, 18, 0.6588235294);
-    gap: 1rem;
-    justify-items: center;
-    padding: 1rem;
-    border: 1rem solid;
-  }
-}
 @media (min-width: 325px) and (max-width: 576px) {
   .gridCarrito {
     display: grid;
     height: 100vh;
-    grid-template-areas: "navb" "nov" "car" "wav" "foot";
-    grid-template-columns: 100vw;
+    grid-template-areas: "navb navb navb" "carr carr carr" "vist vist vist" "foot foot foot";
   }
-  .novedades {
+  .containerCarrito {
+    grid-area: carr;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000000;
     flex-direction: column;
-  }
-  .novedades .novedades__cont {
-    padding: 2rem;
-    grid-area: nov;
-    width: 100vw;
-  }
-  .novedades h3 {
-    text-align: center;
-  }
-  .compra {
-    height: auto;
-    background-color: #626263;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-  }
-  .carrito {
-    display: grid;
-    grid-area: car;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    background-color: rgba(17, 17, 18, 0.6588235294);
-    gap: 1rem;
+    background-color: rgb(33, 37, 41);
+    gap: 0.2rem;
     justify-items: center;
-    padding: 1rem;
+    align-items: flex-start;
     border: 1rem solid;
+  }
+  .containerCarrito .card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    background-color: #a9a9a9;
+  }
+  .containerCarrito div {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+  }
+  .containerCarrito img {
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 1rem;
+  }
+  .containerCarrito .infoCarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: first baseline;
+    width: 50rem;
+  }
+  .containerCarrito .infoCarrito h3 {
+    width: 4rem;
+    display: flex;
+    justify-content: normal;
+    font-size: 10px;
   }
 }/*# sourceMappingURL=main.css.map */

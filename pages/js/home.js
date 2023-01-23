@@ -15,11 +15,11 @@ const logout = document.querySelector("#logout")
 const bienvenido = document.querySelector(".bienvenido")
 
 const subirAlLs = ( clave, valor ) => {
-    sessionStorage.setItem(clave, JSON.stringify(valor))
+    localStorage.setItem(clave, JSON.stringify(valor))
 }
 
 const obtenerDelLs = ( clave ) => {
-    return JSON.parse(sessionStorage.getItem(clave))
+    return JSON.parse(localStorage.getItem(clave))
 }
 
 
@@ -52,13 +52,18 @@ miFormulario.onsubmit = ( event ) => {
     validarLogin(obtenerDelLs("login")) 
 
 
-    logout.onclick = ( event ) => {
-        console.log("Click")
+    function borrarDeLs () {
+        localStorage.removeItem("login")
+    }
+
+
+    logout.onclick = () => {
         grid.style.display = "none"
         logint.style.display ="none"
         pantallaDeInicio.style.display = "flex"
         miFormulario.style.display = "flex"
         miFormulario.reset()
+        borrarDeLs()
     }
 
 

@@ -368,6 +368,42 @@ main {
 
         @media (min-width: 325px) and (max-width: 576px) {
 
+            .grid-inicio {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                background-image: linear-gradient(rgb(3 71 87), gray);
+                height: 100vh;
+                .containerForm {
+                    background-color: gray;
+                    height: 1rem;
+                    padding: 1rem;
+                    border-radius: 2rem;
+                    width:max-content;
+                }
+                .bienvenido {
+                    font-size: 1rem;
+                    color: black;
+                }
+                #formularioDeInicio {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    input {
+                        padding: 0.3rem;
+                        margin: 2rem;
+                        border-radius: 5px;
+                        background-color: black;
+                        color: white;
+                    }
+                    #logint {
+                    display: none;
+                    color: red;
+                }
+            }
+            }
+
             .grid-area {
                         display: grid;
                         grid-template-areas: 

@@ -100,7 +100,7 @@ fetch("./js/productos.json")
 
 function contadorCarro () {
             if (carrito.length === 0) {
-                contador.innerText.style.display=none
+                contador.innerText.style.display="none";
             }
             else {
                 contador.innerText = carrito.length
@@ -136,7 +136,8 @@ function aniadirAlCarrito (array) {
                     color: "white",
                     borderRadius: "0.5rem",
                 }
-            }).showToast();
+            }).showToast()
+        }, 1000)
             const repeat = carrito.some((repeatproduct) => repeatproduct.id === filtrarProducto.id)
             if (repeat) {
                 carrito.map((prod) => {
@@ -147,11 +148,9 @@ function aniadirAlCarrito (array) {
             } else{
             carrito.push(filtrarProducto) 
         }
-    }, 500)
     restableSimulador()
     localStorage.setItem("carrito", JSON.stringify(carrito))  
                         contadorCarro()
-                        console.log(formsInputs)
         }
     })
 }

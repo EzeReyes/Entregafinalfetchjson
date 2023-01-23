@@ -1,24 +1,29 @@
-# EzeReyes-preentrega3Reyes.js
+sitio web (ECOMERCE)
+EL ABUELO MARIO: Se trata de un sitio web de venta de prodcuctos para barberías.
 
-PROFE EL ERROR O INCONVENIENTE QUE ESTOY TENIENDO ES CON EL BOTON DE DESCUENTO QUE SE ENCUENTRA EN LA PAGINA CARRITO. AL MOMENTO DE CARGAR EL ARRAY AL DOM, UTILICE UN FOREACH, PERO LUEGO AL REALIZAR EL FILTER DE PRODUCTOS LOS GUARDO EN UNA NUEVA CONSTANTE QUE SE LLAMA prodDesc, AL MOMENTO DE HACER CLICK EN EL BOTON QUISIERA QUE ME MUESTRE SOLO LOS PRODUCTOS CON DESCUENTO (CON LA CONDICION TRUE), PERO ME LOS AGREGA AL DOM, Y SE VE EL ARRAY ORIGINAL MAS LOS PRODUCTOS CON DESCUENTO. DESDE YA LE AGRADEZCO POR SU COOPERACIÓN.-
+En el sitio se va a encontrar con un login de acceso del cliente, el cual ingresa con  la información guardada en la constante:
+const usuarioPred = {
+    usuario: "ese.reyes1992@gmail.com",
+    contrasenia : "abc123"
+}
 
+Los datos se guardan en el LocalStorage, por lo cual se realiza la validación de datos y permite ingresar o muestra un error.
 
+El boton de Cerrar sesión se encuentra habilitado unicamente en la pagina index, tengo pensado implementarlo en la totalidad de las paginas.
 
+El sitio consiste de información de la empresa  en las primeras páginas, y en la páginas de catalogo y carro es donde mas se verá la interacción y lo aplicado durante el curso, donde usted podra seleccionar el producto que desea agregar al carro, se guarda en el localStorage, donde también aplique algo de asincronismo utilizando el Settimeout, también podra ver la aplicación de funciones, metodos, y el uso de fetch mediante JSON.
 
+Por último cuando usted seleccione pagar con el carro cargado podra ver un aviso de formulario enviado, habiendo aplicado un envío de formulario a traves de form submit al email asignado, para comprobarlo puede ingresar su email reemplazando el campo:
 
-Se trata de la tercer preentrega del curso de JAVASCRIPT de CODER HOUSE
+      <form id="form" action="https://formsubmit.co/ese.reyes1992@gmail.com" method="post">
+en el archivo html de carro.html
 
-
-Que tal Sr Tutor, en esta entrega le fui implementando algunos temas del curso al sitio web (ECOMERCE), este sería mi proyecto final, espero este conforme con lo implementado.
-Aun falta muchisimo por implementar. El único comentario que puedo hacerle es que realicé el login de ingreso al sitio, para poder ingresar al sitio debe utilizar la const usuarioPred. 
-Se creo el formulario que se valida mediante clave y valor, una vez en el sitio podra navegar , si desea cerrar sesión lo debe hacer desde la página index
-
-
+Una aclaración si intenta ver la ultima página que es la de carro.html en versión mobile va a ver que no se ve correctamente responsiva, le pido disculpas, tratare de adaptarla, no llegue con el tiempo, desde ya le agradezco por todo el contenido, tiempo y ayuda brindada en el curso.
 
 Acontinuación le dejo los links de acceso:
 
 Acceso al repositorio desde GitHub: 
-https://github.com/EzeReyes/EzeReyes-preentrega3Reyes.js.git
+https://github.com/EzeReyes/Entregafinalfetchjson.git
 
 Acceso al sitio web desde GitHub pages:
-https://ezereyes.github.io/EzeReyes-preentrega3Reyes.js/
+https://ezereyes.github.io/Entregafinalfetchjson/

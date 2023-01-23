@@ -7,9 +7,9 @@ const formsInputs = document.querySelector("#formsInputs")
 
 
 
+
 function totalCompra () {
     let sumaTotal = infoDelLs.reduce((acu,element) => acu + element.precio*element.cantidad,0)
-    console.log(sumaTotal)
     document.querySelector("#total").innerHTML = `TOTAL: $${sumaTotal}`
     }
     totalCompra()
@@ -45,8 +45,6 @@ const cardHtml = ( array ) => {
     document.querySelector(".containerCarrito").innerHTML = generarNodos
 }
 cardHtml(infoDelLs || [] )
-
-const repeat = infoDelLs.some((repeatproduct) => repeatproduct.id === infoDelLs.id)
 
 
 function borrarDelCarrito (array) {
@@ -91,7 +89,6 @@ function infoSumbit (array) {
     })
 }
 infoSumbit(infoDelLs)
-console.log(formsInputs)
 
 
 const botonCatalogo = `<a id="botonOculto" class="nav-link" href="./catalogo.html">No hay productos en el carrito, si desea comprar haga click aquí</a>`
